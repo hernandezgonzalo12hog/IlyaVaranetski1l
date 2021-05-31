@@ -5,4 +5,4 @@ const EXPERIMENTAL_TYPES   = {
     VERTICAL_TAKE_OFF: "Vertical_take_off"
 };
 
-module.exports =  EXPERIMENTAL_TYPES;
+module.exports = EXPERIMENTAL_TYPES;

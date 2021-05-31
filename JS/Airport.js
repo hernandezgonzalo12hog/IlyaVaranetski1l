@@ -8,10 +8,10 @@ class Airport {
     getPassengerPlanes() {
         let passengerPlanes = [];
         this.planes.forEach(plane => {
-            if (plane instanceof PASSENGER_PLANE) {
+            if (plane instanceof PASSENGER_PLANE) { //camelcase
                 militaryPlanes.push(plane);
             }
-            else{}
+            else{} //remove
         });
         return passengerPlanes;
     }
@@ -48,8 +48,7 @@ class Airport {
         return planeWithMaxCapacity;
     }
 
-
-    getTransportMilitaryPlanes(){
+    getTransportMilitaryPlanes(){  //format
         let transportMilitaryPlanes = [];
         let militaryPlanes = this.getMilitaryPlanes();
         for (let i = 0; i < militaryPlanes.length; i++) {
@@ -60,7 +59,7 @@ class Airport {
         return transportMilitaryPlanes;
     }
 
-    getBomberMilitaryPlanes()
+    getBomberMilitaryPlanes()  //format
     {
         let bomberMilitaryPlanes = [];
         let militaryPlanes = this.getMilitaryPlanes();
@@ -72,9 +71,13 @@ class Airport {
         return bomberMilitaryPlanes;
     }
 
-    constructor(planes) {
+    constructor(planes) {   //initialize on the top
         this.planes = planes;
     }
+
+/**
+ *  
+ */
 
 
     sortByMaxDistance() {
